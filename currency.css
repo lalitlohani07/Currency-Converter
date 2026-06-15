@@ -1,0 +1,149 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+  background-color: #f4f6f8;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== MAIN APP CARD ===== */
+.app-container {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+}
+
+/* ===== TOP NAV ===== */
+.top-nav {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.nav-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #e9edf2;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #333;
+}
+
+.nav-btn.active {
+  background: #006ce0;
+  color: white;
+}
+
+/* ===== CONTENT ===== */
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== CONTROL PANEL ===== */
+.control-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ===== INPUT GROUP ===== */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ===== INPUTS & SELECTS ===== */
+input,
+select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #dcdfe3;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #006ce0;
+}
+
+
+/* ===== RESULT BOX ===== */
+#resultBox {
+  background: #f1f5f9;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #111;
+  text-align: center;
+}
+/* ===== ACCENT COLORS ===== */
+:root {
+  --primary: #0a5cff;
+  --primary-light: #eaf1ff;
+  --border: #dfe6f0;
+  --text-dark: #1f2937;
+}
+
+/* Improve labels */
+.input-group label {
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+/* Inputs & selects hover / focus */
+input,
+select {
+  transition: all 0.2s ease;
+}
+
+input:hover,
+select:hover {
+  border-color: var(--primary);
+}
+
+input:focus,
+select:focus {
+  background: var(--primary-light);
+}
+
+/* Result box highlight */
+#resultBox {
+  border-left: 4px solid var(--primary);
+  background: #f8fbff;
+}
+.currency-select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.flag {
+  width: 28px;
+  height: 20px;
+  border-radius: 4px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
