@@ -1,15 +1,9 @@
-// ==============================
-// STAGE 1: CONNECT TO HTML
-// ==============================
 
 const inputamount = document.getElementById("amount");
 const fromcurrency = document.getElementById("fromCurrency");
 const tocurrency = document.getElementById("toCurrency");
 const resultbox = document.getElementById("resultBox");
-// ==============================
-// STAGE 2: CURRENCY DATA
-// ========================
-// 
+
 let rates={}; 
 
 async function fetchRates() {
@@ -22,11 +16,6 @@ async function fetchRates() {
 
   populateDropdowns();
 }
-
-
-// ==============================
-// STAGE 3: ADD OPTIONS TO SELECT
-// ==============================
 function populateDropdowns() {
   fromcurrency.innerHTML = `<option value="">Select currency</option>`;
   tocurrency.innerHTML = `<option value="">Select currency</option>`;
@@ -43,11 +32,6 @@ function populateDropdowns() {
     tocurrency.appendChild(option2);
   }
 }
-
-// ==============================
-// STAGE 4: CONVERT FUNCTION
-// ==============================
-
 function convertCurrency() {
   const amount = inputamount.value;
   const from = fromcurrency.value;
@@ -67,11 +51,6 @@ function convertCurrency() {
   resultbox.textContent =
     `${amount} ${from} = ${converted.toFixed(2)} ${to}`;
 }
-
-// ==============================
-// STAGE 5: EVENT LISTENERS
-// ==============================
-
 inputamount.addEventListener("input", convertCurrency);
 fromcurrency.addEventListener("change", convertCurrency);
 tocurrency.addEventListener("change", convertCurrency);
